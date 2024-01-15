@@ -20,6 +20,12 @@ public class Reduce1 {
 				.reduce(100, soma);
 		System.out.println(total2);
 		
+		//Resultado foi um Opcional<Integer>...
+		nums.stream()
+			.filter(n -> n > 5) //Filtra alguns elementos
+			.reduce(soma) //Realiza a soma dos elementos filtrados
+			.ifPresent(System.out::println); //Se o resultado estiver presente, faça alguma coisa
+		
 		
 	}
 }
